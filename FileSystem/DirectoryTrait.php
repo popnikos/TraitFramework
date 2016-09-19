@@ -1,20 +1,12 @@
 <?php
 
-namespace Popnikos\FileSystem;
+namespace Popnikos\TraitFramework\FileSystem;
 
 use DirectoryIterator;
 
-Trait Directory
+trait DirectoryTrait
 {
-    private $path;
-    
-    public function getPath() {
-        return $this->path;
-    }
-    
-    public function setPath( $path) {
-        $this->path = $path;
-    }
+	use Popnikos\TraitFramework\FileSystem\PathTrait;
     
     public function find($path, $expression)
     {
